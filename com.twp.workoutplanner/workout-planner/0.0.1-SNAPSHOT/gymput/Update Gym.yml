@@ -1,0 +1,24 @@
+---
+name: "Update Gym"
+
+request:
+  method: "PUT"
+  url: "/api/gyms/00000000-0000-0000-0000-000000000001"
+  headers:
+    Content-Type: "application/json"
+  body:
+    name: "One"
+    location: "One Location"
+  matchers:
+    headers:
+      - key: "Content-Type"
+        regex: "application/json.*"
+        regexType: "as_string"
+response:
+  status: 202
+  headers:
+    Content-Type: "application/json"
+  body:
+    oid: "00000000-0000-0000-0000-000000000001"
+    name: "One"
+    location: "One Location"

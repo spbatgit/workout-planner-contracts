@@ -1,0 +1,22 @@
+---
+name: "Query for all Gyms"
+
+request:
+  method: "GET"
+  url: "/api/gyms"
+response:
+  status: 200
+  headers:
+    Content-Type: "application/json"
+  body:
+    - oid: "00000000-0000-0000-0000-000000000001"
+      name: "One"
+      location: "One Location"
+    - oid: "00000000-0000-0000-0000-000000000002"
+      name: "Two"
+      location: "Two Location"
+  matchers:
+    headers:
+    - key: "Content-Type"
+      regex: "application/json.*"
+      regexType: "as_string"

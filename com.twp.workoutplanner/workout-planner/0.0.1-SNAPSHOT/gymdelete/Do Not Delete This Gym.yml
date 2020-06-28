@@ -1,0 +1,17 @@
+---
+name: "Do Not Delete This Gym"
+
+request:
+  method: "DELETE"
+  url: "/api/gyms/90000000-0000-0000-0000-000000000001"
+  matchers:
+    headers:
+      - key: "Content-Type"
+        regex: "application/json.*"
+        regexType: "as_string"
+response:
+  status: 422
+  headers:
+    Content-Type: "application/json"
+  body:
+    message: "Not able to delete Gym [90000000-0000-0000-0000-000000000001] just because I said so"

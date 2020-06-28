@@ -1,0 +1,19 @@
+---
+name: "Delete Gym"
+
+request:
+  method: "DELETE"
+  url: "/api/gyms/00000000-0000-0000-0000-000000000001"
+  matchers:
+    headers:
+      - key: "Content-Type"
+        regex: "application/json.*"
+        regexType: "as_string"
+response:
+  status: 200
+  headers:
+    Content-Type: "application/json"
+  body:
+    oid: "00000000-0000-0000-0000-000000000001"
+    name: "One"
+    location: "One Location"
