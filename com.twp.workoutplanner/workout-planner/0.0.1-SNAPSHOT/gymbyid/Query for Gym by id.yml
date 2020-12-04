@@ -1,5 +1,5 @@
 ---
-name: "Query for Gym by id not found"
+name: "Query for Gym by id"
 
 request:
   method: "GET"
